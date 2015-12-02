@@ -1,7 +1,7 @@
 Attribute VB_Name = "mConnection"
 
 Sub Main()
-    fMain.Show 1
+    fPatient.Show 1
 End Sub
 Public Sub InitializeConnectionString()
     strDriver = "MySQL ODBC 3.51 Driver"
