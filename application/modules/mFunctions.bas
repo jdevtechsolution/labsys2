@@ -130,3 +130,15 @@ Public Function FillComboBox(cmb As ComboBox, sql As String)
     
 End Function
 
+
+Public Function SetActiveIndex(vStrItem As String, vCombo As ComboBox)
+    Dim i As Integer
+    For i = 0 To vCombo.ListCount - 1
+        If vCombo.List(i) = vStrItem Then
+            vCombo.ListIndex = i
+            Exit Function
+        End If
+    Next
+End Function
+
+

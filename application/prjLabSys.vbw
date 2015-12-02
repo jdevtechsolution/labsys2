@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-fPhysician = 100, 100, 951, 551, , 25, 25, 900, 476, C
-mConnection = 50, 50, 925, 501, C
-=======
 fPhysician = 100, 100, 951, 551, C, 25, 25, 900, 476, C
-mConnection = 50, 50, 925, 501, 
->>>>>>> d82c01541627b82a0e7ce3ac2e0dfd3e2c2d26d6
+mConnection = 50, 50, 925, 501, C
 fMain = 0, 0, 779, 451, C, 100, 100, 975, 551, C
 isButton = 50, 50, 1106, 373, C, 25, 25, 876, 476, C
 LynxGrid = 0, 0, 0, 0, C, 0, 0, 0, 0, C
@@ -13,17 +8,12 @@ ACPRibbon = 0, 0, 0, 0, C, 0, 0, 0, 0, C
 ntPrinter = 0, 0, 0, 0, C
 fTestForm = 150, 150, 929, 601, C, 50, 50, 900, 501, C
 xFrame = 0, 0, 0, 0, C, 0, 0, 0, 0, C
-<<<<<<< HEAD
-fPatient = 125, 125, 1178, 560, , 25, 25, 877, 476, C
-fPatientEntry = 25, 25, 907, 476, , 200, 200, 1082, 651, C
-mFunctions = 25, 25, 907, 476, C
-mVariables = 125, 125, 1007, 576, C
-fPhysicianEntry = 125, 125, 1006, 576, Z, 100, 100, 981, 551, C
-=======
 fPatient = -22, 170, 1031, 605, C, 25, 25, 877, 476, C
 fPatientEntry = 25, 25, 907, 476, C, 200, 200, 1082, 651, C
 mFunctions = 25, 25, 907, 476, C
 mVariables = 125, 125, 1007, 576, C
+fPhysicianEntry = 125, 125, 1006, 576, C, 100, 100, 981, 551, C
 fOrganization = 0, 0, 0, 0, C, 0, 0, 0, 0, C
 fOrganizationEntry = 0, 0, 0, 0, C, 0, 0, 0, 0, C
->>>>>>> d82c01541627b82a0e7ce3ac2e0dfd3e2c2d26d6
+mAutoSuggestCombo = -249, 108, 632, 559, C
+mSetListIndexCombo = 125, 125, 728, 576, C
