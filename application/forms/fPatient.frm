@@ -612,7 +612,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private sql As String
-Private RS As New ADODB.Recordset
+Private rs As New ADODB.Recordset
 
 Private Sub CreateNodes()
     Dim nWidth As Integer
@@ -620,17 +620,26 @@ Private Sub CreateNodes()
         .Nodes.Add , , "1A", "Patient List", 1
         '.Nodes.Add "1A", tvwChild, "1A-1", "List View", 16
         '.Nodes.Add "1A", tvwChild, "1A-2", "Form View", 16
-        .Nodes.Add , , "2A", "Recent Activity", 1
+        .Nodes.Add , , "2A", "Patient History", 1
         '.Nodes.Add "2A", tvwChild, "2A-1", "Recent Activity", 16
         '.Nodes.Item(1).Expanded = True
+        .Nodes.Add , , "3A", "References", 1
+        .Nodes.Add "3A", tvwChild, "3A-1", "Organization List", 16
+        .Nodes.Add "3A", tvwChild, "3A-2", "Physician List", 16
     End With
+End Sub
+
+Private Sub tvOptions_NodeClick(ByVal Node As MSComctlLib.Node)
+    If Node.key = "3A-1" Then
+        fOrganization.Show vbModal
+    End If
 End Sub
 
 Private Sub cmdEdit_Click()
      With lgPatients
         If .ItemCount > 0 Then
             If .SelectedCount > 0 Then
-                fPatientEntry.Mode = "edit"
+                fPatientEntry.mode = "edit"
                 fPatientEntry.txtAddress.Text = .CellText(.row, 2)
                 fPatientEntry.txtMobile.Text = .CellText(.row, 3)
                 fPatientEntry.txtEmail.Text = .CellText(.row, 4)
@@ -660,7 +669,7 @@ Private Sub cmdEdit_Click()
 End Sub
 
 Private Sub cmdNew_Click()
-    fPatientEntry.Mode = "add"
+    fPatientEntry.mode = "add"
     fPatientEntry.Show vbModal
 End Sub
 
@@ -685,32 +694,32 @@ Private Sub LoadPatients(Optional search_text As String = "")
             & "or patient_code LIKE '%" & search_text & "%') " _
             & "order by concat(patient_surname,patient_firstname,patient_middlename) "
             
-        OpenTable sql, RS
-        If RS.EOF = False Then
-            While RS.EOF = False
-                .AddRow RS!patient_code & vbTab _
-                    & RS!patient_surname & ", " & RS!patient_firstname & " " & RS!patient_middlename & vbTab _
-                    & RS!patient_address & vbTab _
-                    & RS!patient_mobile & vbTab _
-                    & RS!patient_email & vbTab _
-                    & RS!patient_surname & vbTab _
-                    & RS!patient_firstname & vbTab _
-                    & RS!patient_middlename & vbTab _
-                    & RS!patient_birthdate & vbTab _
-                    & RS!patient_marital_status & vbTab _
-                    & RS!patient_blood_type & vbTab _
-                    & RS!patient_height & vbTab _
-                    & RS!patient_weight & vbTab _
-                    & RS!patient_telephone & vbTab _
-                    & RS!organization_id & vbTab _
-                    & RS!physician_id & vbTab _
-                    & RS!ref_patient_id & vbTab _
-                    & RS!patient_id
-                RS.MoveNext
+        OpenTable sql, rs
+        If rs.EOF = False Then
+            While rs.EOF = False
+                .AddRow rs!patient_code & vbTab _
+                    & rs!patient_surname & ", " & rs!patient_firstname & " " & rs!patient_middlename & vbTab _
+                    & rs!patient_address & vbTab _
+                    & rs!patient_mobile & vbTab _
+                    & rs!patient_email & vbTab _
+                    & rs!patient_surname & vbTab _
+                    & rs!patient_firstname & vbTab _
+                    & rs!patient_middlename & vbTab _
+                    & rs!patient_birthdate & vbTab _
+                    & rs!patient_marital_status & vbTab _
+                    & rs!patient_blood_type & vbTab _
+                    & rs!patient_height & vbTab _
+                    & rs!patient_weight & vbTab _
+                    & rs!patient_telephone & vbTab _
+                    & rs!organization_id & vbTab _
+                    & rs!physician_id & vbTab _
+                    & rs!ref_patient_id & vbTab _
+                    & rs!patient_id
+                rs.MoveNext
             Wend
         End If
         .Redraw = True
-        RS.Close
+        rs.Close
     End With
 End Sub
 

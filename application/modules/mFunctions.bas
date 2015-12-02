@@ -109,15 +109,24 @@ Public Function StrBlankToEmpty(obj As Object) As Variant
 End Function
 
 
-
-
-
-
-
-
-
-
-
-
-
+Public Function FillComboBox(cmb As ComboBox, sql As String)
+    Dim rsFill As New ADODB.Recordset
+    
+    OpenTable sql, rsFill
+    
+    '** fill combobox 0 index field = id , 1 index field = display text
+    
+    With rsFill
+        cmb.Clear
+        If .EOF = False Then
+            While .EOF = False
+                cmb.AddItem .Fields(1).Value
+                cmb.ItemData(cmb.NewIndex) = .Fields(0).Value
+                .MoveNext
+            Wend
+        End If
+        .Close
+    End With
+    
+End Function
 

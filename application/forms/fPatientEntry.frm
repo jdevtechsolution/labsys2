@@ -14,6 +14,64 @@ Begin VB.Form fPatientEntry
    ScaleWidth      =   7440
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
+   Begin prjLabSys.isButton cmdSave 
+      Height          =   375
+      Left            =   4080
+      TabIndex        =   16
+      Top             =   7920
+      Width           =   1935
+      _ExtentX        =   3413
+      _ExtentY        =   661
+      Icon            =   "fPatientEntry.frx":0000
+      Style           =   6
+      Caption         =   "&Save Changes"
+      iNonThemeStyle  =   0
+      Object.ToolTipText     =   ""
+      ToolTipTitle    =   ""
+      ToolTipIcon     =   0
+      ToolTipType     =   1
+      ttForeColor     =   0
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MaskColor       =   0
+      RoundedBordersByTheme=   0   'False
+   End
+   Begin prjLabSys.isButton cmdClose 
+      Height          =   375
+      Left            =   6120
+      TabIndex        =   17
+      Top             =   7920
+      Width           =   1215
+      _ExtentX        =   2143
+      _ExtentY        =   661
+      Icon            =   "fPatientEntry.frx":001C
+      Style           =   6
+      Caption         =   "&Close"
+      iNonThemeStyle  =   0
+      Object.ToolTipText     =   ""
+      ToolTipTitle    =   ""
+      ToolTipIcon     =   0
+      ToolTipType     =   1
+      ttForeColor     =   0
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MaskColor       =   0
+      RoundedBordersByTheme=   0   'False
+   End
    Begin VB.PictureBox Picture2 
       Appearance      =   0  'Flat
       BackColor       =   &H80000005&
@@ -38,7 +96,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   315
          Left            =   1440
-         TabIndex        =   40
+         TabIndex        =   14
          Top             =   6360
          Width           =   5535
       End
@@ -54,7 +112,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   315
          Left            =   1440
-         TabIndex        =   14
+         TabIndex        =   15
          Top             =   6720
          Width           =   5535
       End
@@ -187,9 +245,9 @@ Begin VB.Form fPatientEntry
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "fPatientEntry.frx":0000
+         ItemData        =   "fPatientEntry.frx":0038
          Left            =   1440
-         List            =   "fPatientEntry.frx":0010
+         List            =   "fPatientEntry.frx":0048
          Style           =   2  'Dropdown List
          TabIndex        =   6
          Top             =   2760
@@ -213,7 +271,7 @@ Begin VB.Form fPatientEntry
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   82903041
+         Format          =   191889409
          CurrentDate     =   42339
       End
       Begin VB.TextBox txtAddress 
@@ -260,7 +318,7 @@ Begin VB.Form fPatientEntry
          Left            =   4800
          ScaleHeight     =   2025
          ScaleWidth      =   2145
-         TabIndex        =   17
+         TabIndex        =   18
          Top             =   600
          Width           =   2175
       End
@@ -301,12 +359,12 @@ Begin VB.Form fPatientEntry
       Begin prjLabSys.isButton cmdBrowse 
          Height          =   330
          Left            =   4800
-         TabIndex        =   25
+         TabIndex        =   26
          Top             =   2760
          Width           =   2175
          _ExtentX        =   3836
          _ExtentY        =   582
-         Icon            =   "fPatientEntry.frx":0038
+         Icon            =   "fPatientEntry.frx":0070
          Style           =   6
          Caption         =   "&Browse"
          iNonThemeStyle  =   0
@@ -342,7 +400,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   360
-         TabIndex        =   37
+         TabIndex        =   38
          Top             =   6720
          Width           =   1005
       End
@@ -361,7 +419,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   360
-         TabIndex        =   36
+         TabIndex        =   37
          Top             =   6360
          Width           =   1005
       End
@@ -380,7 +438,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   35
+         TabIndex        =   36
          Top             =   6000
          Width           =   1125
       End
@@ -405,7 +463,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   120
-         TabIndex        =   34
+         TabIndex        =   35
          Top             =   5520
          Width           =   1530
       End
@@ -424,7 +482,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   4800
-         TabIndex        =   33
+         TabIndex        =   34
          Top             =   5040
          Width           =   1005
       End
@@ -443,7 +501,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   2640
-         TabIndex        =   32
+         TabIndex        =   33
          Top             =   5040
          Width           =   885
       End
@@ -462,7 +520,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   31
+         TabIndex        =   32
          Top             =   5040
          Width           =   1125
       End
@@ -487,7 +545,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   120
-         TabIndex        =   30
+         TabIndex        =   31
          Top             =   4560
          Width           =   1755
       End
@@ -506,7 +564,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   29
+         TabIndex        =   30
          Top             =   4080
          Width           =   1125
       End
@@ -525,7 +583,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   3720
-         TabIndex        =   28
+         TabIndex        =   29
          Top             =   3720
          Width           =   1005
       End
@@ -544,7 +602,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   27
+         TabIndex        =   28
          Top             =   3720
          Width           =   1125
       End
@@ -569,7 +627,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   120
-         TabIndex        =   26
+         TabIndex        =   27
          Top             =   3240
          Width           =   1725
       End
@@ -588,7 +646,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   120
-         TabIndex        =   24
+         TabIndex        =   25
          Top             =   2760
          Width           =   1245
       End
@@ -607,7 +665,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   360
-         TabIndex        =   23
+         TabIndex        =   24
          Top             =   2400
          Width           =   1005
       End
@@ -626,7 +684,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   360
-         TabIndex        =   22
+         TabIndex        =   23
          Top             =   1680
          Width           =   1005
       End
@@ -645,7 +703,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   120
-         TabIndex        =   21
+         TabIndex        =   22
          Top             =   120
          Width           =   1800
       End
@@ -670,7 +728,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   20
+         TabIndex        =   21
          Top             =   960
          Width           =   1125
       End
@@ -689,7 +747,7 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   19
+         TabIndex        =   20
          Top             =   1320
          Width           =   1125
       End
@@ -708,68 +766,10 @@ Begin VB.Form fPatientEntry
          EndProperty
          Height          =   195
          Left            =   480
-         TabIndex        =   18
+         TabIndex        =   19
          Top             =   600
          Width           =   885
       End
-   End
-   Begin prjLabSys.isButton cmdSave 
-      Height          =   375
-      Left            =   4080
-      TabIndex        =   15
-      Top             =   7920
-      Width           =   1935
-      _ExtentX        =   3413
-      _ExtentY        =   661
-      Icon            =   "fPatientEntry.frx":0054
-      Style           =   6
-      Caption         =   "&Save Changes"
-      iNonThemeStyle  =   0
-      Object.ToolTipText     =   ""
-      ToolTipTitle    =   ""
-      ToolTipIcon     =   0
-      ToolTipType     =   1
-      ttForeColor     =   0
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Verdana"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      MaskColor       =   0
-      RoundedBordersByTheme=   0   'False
-   End
-   Begin prjLabSys.isButton cmdClose 
-      Height          =   375
-      Left            =   6120
-      TabIndex        =   16
-      Top             =   7920
-      Width           =   1215
-      _ExtentX        =   2143
-      _ExtentY        =   661
-      Icon            =   "fPatientEntry.frx":0070
-      Style           =   6
-      Caption         =   "&Close"
-      iNonThemeStyle  =   0
-      Object.ToolTipText     =   ""
-      ToolTipTitle    =   ""
-      ToolTipIcon     =   0
-      ToolTipType     =   1
-      ttForeColor     =   0
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Verdana"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      MaskColor       =   0
-      RoundedBordersByTheme=   0   'False
    End
    Begin VB.Label Label21 
       BackStyle       =   0  'Transparent
@@ -784,8 +784,8 @@ Begin VB.Form fPatientEntry
          Strikethrough   =   0   'False
       EndProperty
       Height          =   135
-      Left            =   3000
-      TabIndex        =   39
+      Left            =   2400
+      TabIndex        =   40
       Top             =   240
       Width           =   2775
    End
@@ -794,7 +794,7 @@ Begin VB.Form fPatientEntry
       Caption         =   "Patient Adding/Editing"
       BeginProperty Font 
          Name            =   "Tahoma"
-         Size            =   12
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -803,9 +803,9 @@ Begin VB.Form fPatientEntry
       EndProperty
       Height          =   375
       Left            =   120
-      TabIndex        =   38
+      TabIndex        =   39
       Top             =   120
-      Width           =   3135
+      Width           =   2295
    End
 End
 Attribute VB_Name = "fPatientEntry"
@@ -814,9 +814,10 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
-Public Mode As String                       '** holds add = insert /edit = update
+Public mode As String                       '** holds add = insert /edit = update
 Private sql As String                       '** holds sql statement
 Public selected_patient_id As Integer       '** holds the selected patient id for updating
+
 
 Private Sub cmdClose_Click()
     Unload Me
@@ -826,6 +827,7 @@ Private Sub Form_Load()
     Center Me
     cmbMaritalStatus.ListIndex = 0          '** set default item = 'single'
     dtBirthdate.Value = Now                 '** set default date = current system date
+    FillOrganization
 End Sub
 
 Private Function ValidateFields() As Boolean
@@ -996,9 +998,9 @@ End Sub
 
 Private Sub cmdSave_Click()
     If ValidateFields() = True Then
-        If Mode = "add" Then
+        If mode = "add" Then
             InsertPatient
-        ElseIf Mode = "edit" Then
+        ElseIf mode = "edit" Then
             UpdatePatient
         End If
     End If
@@ -1023,6 +1025,10 @@ Private Sub ClearControls()
 End Sub
 
 
+Private Sub FillOrganization()
+    sql = "SELECT org_id, org_name FROM organization where is_deleted = 0 and is_active = 1 "
+    FillComboBox cmbOrganization, sql
+End Sub
 
 
 
