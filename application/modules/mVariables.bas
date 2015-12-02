@@ -9,3 +9,14 @@ Public strUser As String                                                '** data
 Public strPassword As String                                            '** database password
 Public Const system_title As String = "Laboratory Management System"    '** system title
 Public current_user_id As Integer                                       '** current user
+
+
+
+Public Enum eTxnMode
+    [eAddNew]
+    [eEdit]
+End Enum
+
+Public Enum eCallingForm
+    [ePhysician]
+End Enum

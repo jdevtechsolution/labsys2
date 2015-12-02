@@ -1,15 +1,17 @@
 Attribute VB_Name = "mConnection"
 
 Sub Main()
-    fMain.Show 1
+    fPhysician.Show
 End Sub
+
+
 Public Sub InitializeConnectionString()
-    strDriver = "MySQL ODBC 3.51 Driver"
+    strDriver = "MySQL ODBC 5.1 Driver"
     strServer = "localhost"
     strPort = "3306"
     strDatabase = "labsys"
     strUser = "root"
-    strPassword = "jojosoliman"
+    strPassword = "bss"
 End Sub
 
 Public Sub OpenConnection()

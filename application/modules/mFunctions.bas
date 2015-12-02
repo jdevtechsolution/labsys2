@@ -107,3 +107,17 @@ Public Function StrBlankToEmpty(obj As Object) As Variant
     End If
     
 End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
