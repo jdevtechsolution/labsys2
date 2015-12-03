@@ -1,10 +1,10 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Begin VB.Form fPatient 
    Appearance      =   0  'Flat
    BackColor       =   &H80000005&
    BorderStyle     =   4  'Fixed ToolWindow
-   ClientHeight    =   9750
+   ClientHeight    =   10110
    ClientLeft      =   45
    ClientTop       =   315
    ClientWidth     =   15480
@@ -13,7 +13,7 @@ Begin VB.Form fPatient
    MaxButton       =   0   'False
    MinButton       =   0   'False
    Picture         =   "fPatient.frx":0000
-   ScaleHeight     =   9750
+   ScaleHeight     =   10110
    ScaleWidth      =   15480
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
@@ -21,9 +21,9 @@ Begin VB.Form fPatient
       Appearance      =   0  'Flat
       BackColor       =   &H80000005&
       ForeColor       =   &H80000008&
-      Height          =   9495
+      Height          =   9855
       Left            =   120
-      ScaleHeight     =   9465
+      ScaleHeight     =   9825
       ScaleWidth      =   15225
       TabIndex        =   0
       Top             =   120
@@ -36,8 +36,8 @@ Begin VB.Form fPatient
          Left            =   120
          ScaleHeight     =   6225
          ScaleWidth      =   2745
-         TabIndex        =   8
-         Top             =   3000
+         TabIndex        =   7
+         Top             =   3480
          Width           =   2775
          Begin VB.PictureBox Picture4 
             Appearance      =   0  'Flat
@@ -47,7 +47,7 @@ Begin VB.Form fPatient
             Left            =   120
             ScaleHeight     =   2145
             ScaleWidth      =   2505
-            TabIndex        =   10
+            TabIndex        =   9
             Top             =   360
             Width           =   2535
          End
@@ -66,7 +66,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   20
+            TabIndex        =   19
             Top             =   4800
             Width           =   2325
          End
@@ -85,7 +85,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   19
+            TabIndex        =   18
             Top             =   5040
             Width           =   2325
          End
@@ -104,7 +104,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   18
+            TabIndex        =   17
             Top             =   3840
             Width           =   2325
          End
@@ -123,7 +123,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   17
+            TabIndex        =   16
             Top             =   4080
             Width           =   2325
          End
@@ -142,7 +142,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   16
+            TabIndex        =   15
             Top             =   4560
             Width           =   2325
          End
@@ -161,7 +161,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   15
+            TabIndex        =   14
             Top             =   4320
             Width           =   2325
          End
@@ -180,7 +180,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   435
             Left            =   120
-            TabIndex        =   14
+            TabIndex        =   13
             Top             =   3360
             Width           =   2325
          End
@@ -199,7 +199,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   13
+            TabIndex        =   12
             Top             =   3120
             Width           =   2325
          End
@@ -218,7 +218,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   12
+            TabIndex        =   11
             Top             =   2640
             Width           =   2325
          End
@@ -237,7 +237,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   11
+            TabIndex        =   10
             Top             =   2880
             Width           =   2325
          End
@@ -262,7 +262,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   120
-            TabIndex        =   9
+            TabIndex        =   8
             Top             =   30
             Width           =   1245
          End
@@ -275,8 +275,8 @@ Begin VB.Form fPatient
          Left            =   3000
          ScaleHeight     =   8745
          ScaleWidth      =   12105
-         TabIndex        =   3
-         Top             =   480
+         TabIndex        =   2
+         Top             =   960
          Width           =   12135
          Begin VB.TextBox txtSearch 
             Appearance      =   0  'Flat
@@ -291,14 +291,14 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   285
             Left            =   8040
-            TabIndex        =   4
+            TabIndex        =   3
             Top             =   120
             Width           =   3975
          End
          Begin prjLabSys.isButton cmdNew 
             Height          =   330
             Left            =   120
-            TabIndex        =   5
+            TabIndex        =   4
             Top             =   120
             Width           =   1695
             _ExtentX        =   2990
@@ -327,7 +327,7 @@ Begin VB.Form fPatient
          Begin prjLabSys.LynxGrid lgPatients 
             Height          =   8175
             Left            =   120
-            TabIndex        =   6
+            TabIndex        =   5
             Top             =   480
             Width           =   11895
             _ExtentX        =   20981
@@ -367,7 +367,7 @@ Begin VB.Form fPatient
          Begin prjLabSys.isButton cmdEdit 
             Height          =   330
             Left            =   1920
-            TabIndex        =   21
+            TabIndex        =   20
             Top             =   120
             Width           =   1695
             _ExtentX        =   2990
@@ -408,7 +408,7 @@ Begin VB.Form fPatient
             EndProperty
             Height          =   195
             Left            =   6960
-            TabIndex        =   7
+            TabIndex        =   6
             Top             =   120
             Width           =   1005
          End
@@ -416,8 +416,8 @@ Begin VB.Form fPatient
       Begin MSComctlLib.TreeView tvOptions 
          Height          =   2460
          Left            =   120
-         TabIndex        =   2
-         Top             =   480
+         TabIndex        =   1
+         Top             =   960
          Width           =   2775
          _ExtentX        =   4895
          _ExtentY        =   4339
@@ -440,16 +440,59 @@ Begin VB.Form fPatient
             Strikethrough   =   0   'False
          EndProperty
       End
-      Begin VB.Line Line1 
-         X1              =   120
-         X2              =   15120
-         Y1              =   360
-         Y2              =   360
+      Begin VB.Shape Shape2 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
+         Left            =   5280
+         Top             =   600
+         Width           =   9855
       End
-      Begin VB.Label Label1 
+      Begin VB.Label Label17 
          AutoSize        =   -1  'True
+         BackColor       =   &H00FFFFFF&
          BackStyle       =   0  'Transparent
-         Caption         =   "Patient Management"
+         Caption         =   "Create new, edit, remove and view Physician Information."
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00C00000&
+         Height          =   195
+         Left            =   960
+         TabIndex        =   22
+         Top             =   480
+         Width           =   4200
+      End
+      Begin VB.Shape Shape1 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
+         Left            =   960
+         Top             =   720
+         Width           =   14175
+      End
+      Begin VB.Image Image2 
+         Appearance      =   0  'Flat
+         Height          =   615
+         Left            =   120
+         Picture         =   "fPatient.frx":1C8F1
+         Stretch         =   -1  'True
+         Top             =   120
+         Width           =   735
+      End
+      Begin VB.Label Label16 
+         AutoSize        =   -1  'True
+         BackColor       =   &H00FFFFFF&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Physician Information"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   9.75
@@ -461,10 +504,10 @@ Begin VB.Form fPatient
          EndProperty
          ForeColor       =   &H00C00000&
          Height          =   240
-         Left            =   120
-         TabIndex        =   1
-         Top             =   120
-         Width           =   2025
+         Left            =   960
+         TabIndex        =   21
+         Top             =   240
+         Width           =   2100
       End
    End
    Begin MSComctlLib.ImageList SmallIcons 
@@ -480,127 +523,127 @@ Begin VB.Form fPatient
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   31
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1C8F1
+            Picture         =   "fPatient.frx":1D3B7
             Key             =   "Open"
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1CC43
+            Picture         =   "fPatient.frx":1D709
             Key             =   "Save"
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1CF95
+            Picture         =   "fPatient.frx":1DA5B
             Key             =   "Save As"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1D2E7
+            Picture         =   "fPatient.frx":1DDAD
             Key             =   "Close"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1D639
+            Picture         =   "fPatient.frx":1E0FF
             Key             =   "Properties"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1D98B
+            Picture         =   "fPatient.frx":1E451
             Key             =   "Print"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1DCDD
+            Picture         =   "fPatient.frx":1E7A3
             Key             =   "Cut"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1E02F
+            Picture         =   "fPatient.frx":1EAF5
             Key             =   "Copy"
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1E381
+            Picture         =   "fPatient.frx":1EE47
             Key             =   "Replace"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1E6D3
+            Picture         =   "fPatient.frx":1F199
             Key             =   "Go To"
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1EA25
+            Picture         =   "fPatient.frx":1F4EB
             Key             =   ""
          EndProperty
          BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1EFBF
+            Picture         =   "fPatient.frx":1FA85
             Key             =   ""
          EndProperty
          BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1F559
+            Picture         =   "fPatient.frx":2001F
             Key             =   ""
          EndProperty
          BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":1FAF3
+            Picture         =   "fPatient.frx":205B9
             Key             =   ""
          EndProperty
          BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":2008D
+            Picture         =   "fPatient.frx":20B53
             Key             =   ""
          EndProperty
          BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":20627
+            Picture         =   "fPatient.frx":210ED
             Key             =   ""
          EndProperty
          BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":20BC1
+            Picture         =   "fPatient.frx":21687
             Key             =   ""
          EndProperty
          BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":2115B
+            Picture         =   "fPatient.frx":21C21
             Key             =   ""
          EndProperty
          BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":216F5
+            Picture         =   "fPatient.frx":221BB
             Key             =   ""
          EndProperty
          BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":21C8F
+            Picture         =   "fPatient.frx":22755
             Key             =   ""
          EndProperty
          BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":22229
+            Picture         =   "fPatient.frx":22CEF
             Key             =   ""
          EndProperty
          BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":227C3
+            Picture         =   "fPatient.frx":23289
             Key             =   ""
          EndProperty
          BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":22D5D
+            Picture         =   "fPatient.frx":23823
             Key             =   ""
          EndProperty
          BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":232F7
+            Picture         =   "fPatient.frx":23DBD
             Key             =   ""
          EndProperty
          BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":23891
+            Picture         =   "fPatient.frx":24357
             Key             =   ""
          EndProperty
          BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":2400B
+            Picture         =   "fPatient.frx":24AD1
             Key             =   ""
          EndProperty
          BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":24A1D
+            Picture         =   "fPatient.frx":254E3
             Key             =   ""
          EndProperty
          BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":25197
+            Picture         =   "fPatient.frx":25C5D
             Key             =   ""
          EndProperty
          BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":25BA9
+            Picture         =   "fPatient.frx":2666F
             Key             =   ""
          EndProperty
          BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":26323
+            Picture         =   "fPatient.frx":26DE9
             Key             =   ""
          EndProperty
          BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPatient.frx":26A9D
+            Picture         =   "fPatient.frx":27563
             Key             =   ""
          EndProperty
       EndProperty
@@ -646,7 +689,7 @@ Private Sub cmdEdit_Click()
             
                 fPatientEntry.txtSurname.Text = .CellText(.row, 5)
                 fPatientEntry.txtFirstname.Text = .CellText(.row, 6)
-                fPatientEntry.txtMiddleName.Text = .CellText(.row, 7)
+                fPatientEntry.txtMiddlename.Text = .CellText(.row, 7)
                 fPatientEntry.dtBirthdate = CDate(.CellText(.row, 8))
                 fPatientEntry.cmbMaritalStatus.Text = .CellText(.row, 9)
                 fPatientEntry.txtBloodType.Text = .CellText(.row, 10)

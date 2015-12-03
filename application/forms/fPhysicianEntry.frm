@@ -3,43 +3,46 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Begin VB.Form fPhysicianEntry 
    BackColor       =   &H00FFFFFF&
    BorderStyle     =   4  'Fixed ToolWindow
-   ClientHeight    =   7860
+   ClientHeight    =   8340
    ClientLeft      =   45
    ClientTop       =   315
-   ClientWidth     =   7185
+   ClientWidth     =   7215
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    Picture         =   "fPhysicianEntry.frx":0000
-   ScaleHeight     =   7860
-   ScaleWidth      =   7185
+   ScaleHeight     =   8340
+   ScaleWidth      =   7215
    ShowInTaskbar   =   0   'False
    StartUpPosition =   3  'Windows Default
-   Begin VB.PictureBox Picture2 
+   Begin VB.CommandButton btnClose 
+      Caption         =   "&C"
+      Height          =   495
+      Left            =   7560
+      TabIndex        =   34
+      Top             =   2400
+      Width           =   855
+   End
+   Begin VB.CommandButton btnSave 
+      Caption         =   "&S"
+      Height          =   495
+      Left            =   7560
+      TabIndex        =   33
+      Top             =   1800
+      Width           =   855
+   End
+   Begin VB.PictureBox Picture1 
       Appearance      =   0  'Flat
       BackColor       =   &H80000005&
       ForeColor       =   &H80000008&
-      Height          =   6975
+      Height          =   7695
       Left            =   120
-      ScaleHeight     =   6945
+      ScaleHeight     =   7665
       ScaleWidth      =   6945
-      TabIndex        =   13
-      TabStop         =   0   'False
-      Top             =   360
+      TabIndex        =   14
+      Top             =   120
       Width           =   6975
-      Begin VB.PictureBox Picture1 
-         Appearance      =   0  'Flat
-         BackColor       =   &H80000005&
-         ForeColor       =   &H80000008&
-         Height          =   1575
-         Left            =   4920
-         ScaleHeight     =   1545
-         ScaleWidth      =   1785
-         TabIndex        =   32
-         Top             =   600
-         Width           =   1815
-      End
-      Begin VB.TextBox txtEmail 
+      Begin VB.TextBox txtTitle 
          Appearance      =   0  'Flat
          BeginProperty Font 
             Name            =   "Tahoma"
@@ -52,8 +55,163 @@ Begin VB.Form fPhysicianEntry
          EndProperty
          Height          =   285
          Left            =   1200
-         TabIndex        =   6
-         Top             =   3240
+         TabIndex        =   3
+         Top             =   2520
+         Width           =   3615
+      End
+      Begin VB.TextBox txtSurname 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   0
+         Top             =   1440
+         Width           =   3615
+      End
+      Begin VB.TextBox txtMiddlename 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   2
+         Top             =   2160
+         Width           =   3615
+      End
+      Begin VB.TextBox txtFirstname 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   1
+         Top             =   1800
+         Width           =   3615
+      End
+      Begin VB.TextBox txtAddress 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   525
+         Left            =   1200
+         MultiLine       =   -1  'True
+         ScrollBars      =   2  'Vertical
+         TabIndex        =   7
+         Top             =   4320
+         Width           =   5535
+      End
+      Begin VB.TextBox txtHospital 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   8
+         Top             =   4920
+         Width           =   5535
+      End
+      Begin VB.TextBox txtMobile 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   4
+         Top             =   3600
+         Width           =   2415
+      End
+      Begin VB.TextBox txtLandline 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   4680
+         TabIndex        =   5
+         Top             =   3600
+         Width           =   2055
+      End
+      Begin VB.TextBox txtSchool 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   9
+         Top             =   5880
+         Width           =   5535
+      End
+      Begin VB.TextBox txtDepartment 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   285
+         Left            =   1200
+         TabIndex        =   10
+         Top             =   6240
          Width           =   5535
       End
       Begin VB.TextBox txtExpertise 
@@ -72,10 +230,10 @@ Begin VB.Form fPhysicianEntry
          MultiLine       =   -1  'True
          ScrollBars      =   2  'Vertical
          TabIndex        =   11
-         Top             =   5880
+         Top             =   6600
          Width           =   5535
       End
-      Begin VB.TextBox txtDepartment 
+      Begin VB.TextBox txtEmail 
          Appearance      =   0  'Flat
          BeginProperty Font 
             Name            =   "Tahoma"
@@ -88,170 +246,15 @@ Begin VB.Form fPhysicianEntry
          EndProperty
          Height          =   285
          Left            =   1200
-         TabIndex        =   10
-         Top             =   5520
+         TabIndex        =   6
+         Top             =   3960
          Width           =   5535
-      End
-      Begin VB.TextBox txtSchool 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   9
-         Top             =   5160
-         Width           =   5535
-      End
-      Begin VB.TextBox txtLandline 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   4680
-         TabIndex        =   5
-         Top             =   2880
-         Width           =   2055
-      End
-      Begin VB.TextBox txtMobile 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   4
-         Top             =   2880
-         Width           =   2415
-      End
-      Begin VB.TextBox txtHospital 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   8
-         Top             =   4200
-         Width           =   5535
-      End
-      Begin VB.TextBox txtAddress 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   525
-         Left            =   1200
-         MultiLine       =   -1  'True
-         ScrollBars      =   2  'Vertical
-         TabIndex        =   7
-         Top             =   3600
-         Width           =   5535
-      End
-      Begin VB.TextBox txtFirstname 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   1
-         Top             =   1080
-         Width           =   3615
-      End
-      Begin VB.TextBox txtMiddlename 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   2
-         Top             =   1440
-         Width           =   3615
-      End
-      Begin VB.TextBox txtSurname 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   0
-         Top             =   720
-         Width           =   3615
-      End
-      Begin VB.TextBox txtTitle 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
-         Left            =   1200
-         TabIndex        =   3
-         Top             =   1800
-         Width           =   3615
       End
       Begin prjLabSys.isButton cmdBrowse 
          Height          =   330
          Left            =   4920
-         TabIndex        =   33
-         Top             =   2220
+         TabIndex        =   17
+         Top             =   2940
          Width           =   1815
          _ExtentX        =   3201
          _ExtentY        =   582
@@ -259,6 +262,7 @@ Begin VB.Form fPhysicianEntry
          Style           =   6
          Caption         =   "&Browse"
          iNonThemeStyle  =   0
+         Enabled         =   0   'False
          Object.ToolTipText     =   ""
          ToolTipTitle    =   ""
          ToolTipIcon     =   0
@@ -276,86 +280,55 @@ Begin VB.Form fPhysicianEntry
          MaskColor       =   0
          RoundedBordersByTheme=   0   'False
       End
-      Begin VB.Label Label15 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Email :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
+      Begin VB.Shape Shape5 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
          Left            =   240
-         TabIndex        =   29
-         Top             =   3240
-         Width           =   885
+         Top             =   5760
+         Width           =   6615
       End
-      Begin VB.Label Label14 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Expertise :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   0
-         TabIndex        =   28
-         Top             =   5880
-         Width           =   1125
-      End
-      Begin VB.Label Label13 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Department :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   0
-         TabIndex        =   27
-         Top             =   5520
-         Width           =   1125
-      End
-      Begin VB.Label Label12 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "School :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
+      Begin VB.Shape Shape4 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
          Left            =   240
-         TabIndex        =   26
-         Top             =   5160
-         Width           =   885
+         Top             =   3360
+         Width           =   6615
       End
-      Begin VB.Label Label11 
+      Begin VB.Shape Shape3 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
+         Left            =   240
+         Top             =   1200
+         Width           =   6615
+      End
+      Begin VB.Shape Shape2 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
+         Left            =   3840
+         Top             =   600
+         Width           =   3015
+      End
+      Begin VB.Shape Shape1 
+         BorderColor     =   &H00FFFFFF&
+         FillColor       =   &H00FF0000&
+         FillStyle       =   0  'Solid
+         Height          =   60
+         Left            =   960
+         Top             =   720
+         Width           =   5895
+      End
+      Begin VB.Label Label6 
          AutoSize        =   -1  'True
          BackColor       =   &H00FFFFFF&
-         Caption         =   "Educational Information"
+         Caption         =   "Contact Information"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -365,123 +338,17 @@ Begin VB.Form fPhysicianEntry
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   195
-         Left            =   120
-         TabIndex        =   25
-         Top             =   4800
-         Width           =   2040
-      End
-      Begin VB.Line Line3 
-         X1              =   120
-         X2              =   6720
-         Y1              =   5040
-         Y2              =   5040
-      End
-      Begin VB.Label Label10 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Landline :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   3720
-         TabIndex        =   24
-         Top             =   2880
-         Width           =   885
-      End
-      Begin VB.Label Label9 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Mobile :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
+         ForeColor       =   &H00C00000&
          Height          =   195
          Left            =   240
-         TabIndex        =   23
-         Top             =   2880
-         Width           =   885
+         TabIndex        =   32
+         Top             =   3120
+         Width           =   1725
       End
-      Begin VB.Label Label8 
+      Begin VB.Label Label5 
          Alignment       =   1  'Right Justify
          BackColor       =   &H00FFFFFF&
-         Caption         =   "Hospital :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   240
-         TabIndex        =   22
-         Top             =   4200
-         Width           =   885
-      End
-      Begin VB.Label Label7 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Address :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   240
-         TabIndex        =   21
-         Top             =   3600
-         Width           =   885
-      End
-      Begin VB.Label Label1 
-         AutoSize        =   -1  'True
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Personal Information"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   120
-         TabIndex        =   19
-         Top             =   240
-         Width           =   1800
-      End
-      Begin VB.Line Line1 
-         X1              =   240
-         X2              =   6840
-         Y1              =   480
-         Y2              =   480
-      End
-      Begin VB.Label Label3 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Firstname :"
+         Caption         =   "Title :"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -493,27 +360,8 @@ Begin VB.Form fPhysicianEntry
          EndProperty
          Height          =   195
          Left            =   0
-         TabIndex        =   18
-         Top             =   1080
-         Width           =   1125
-      End
-      Begin VB.Label Label4 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Caption         =   "Middlename :"
-         BeginProperty Font 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   195
-         Left            =   0
-         TabIndex        =   17
-         Top             =   1440
+         TabIndex        =   31
+         Top             =   2520
          Width           =   1125
       End
       Begin VB.Label Label2 
@@ -531,14 +379,14 @@ Begin VB.Form fPhysicianEntry
          EndProperty
          Height          =   195
          Left            =   240
-         TabIndex        =   16
-         Top             =   720
+         TabIndex        =   30
+         Top             =   1440
          Width           =   885
       End
-      Begin VB.Label Label5 
+      Begin VB.Label Label4 
          Alignment       =   1  'Right Justify
          BackColor       =   &H00FFFFFF&
-         Caption         =   "Title :"
+         Caption         =   "Middlename :"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -550,20 +398,33 @@ Begin VB.Form fPhysicianEntry
          EndProperty
          Height          =   195
          Left            =   0
-         TabIndex        =   15
+         TabIndex        =   29
+         Top             =   2160
+         Width           =   1125
+      End
+      Begin VB.Label Label3 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Firstname :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   0
+         TabIndex        =   28
          Top             =   1800
          Width           =   1125
       End
-      Begin VB.Line Line2 
-         X1              =   120
-         X2              =   6720
-         Y1              =   2640
-         Y2              =   2640
-      End
-      Begin VB.Label Label6 
+      Begin VB.Label Label1 
          AutoSize        =   -1  'True
          BackColor       =   &H00FFFFFF&
-         Caption         =   "Contact Information"
+         Caption         =   "Personal Information"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -573,22 +434,256 @@ Begin VB.Form fPhysicianEntry
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         ForeColor       =   &H00C00000&
          Height          =   195
+         Left            =   240
+         TabIndex        =   27
+         Top             =   960
+         Width           =   1800
+      End
+      Begin VB.Label Label7 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Address :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   240
+         TabIndex        =   26
+         Top             =   4320
+         Width           =   885
+      End
+      Begin VB.Label Label8 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Hospital :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   240
+         TabIndex        =   25
+         Top             =   4920
+         Width           =   885
+      End
+      Begin VB.Label Label9 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Mobile :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   240
+         TabIndex        =   24
+         Top             =   3600
+         Width           =   885
+      End
+      Begin VB.Label Label10 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Landline :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   3720
+         TabIndex        =   23
+         Top             =   3600
+         Width           =   885
+      End
+      Begin VB.Label Label11 
+         AutoSize        =   -1  'True
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Educational Information"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00C00000&
+         Height          =   195
+         Left            =   240
+         TabIndex        =   22
+         Top             =   5520
+         Width           =   2040
+      End
+      Begin VB.Label Label12 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "School :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   240
+         TabIndex        =   21
+         Top             =   5880
+         Width           =   885
+      End
+      Begin VB.Label Label13 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Department :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   0
+         TabIndex        =   20
+         Top             =   6240
+         Width           =   1125
+      End
+      Begin VB.Label Label14 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Expertise :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   0
+         TabIndex        =   19
+         Top             =   6600
+         Width           =   1125
+      End
+      Begin VB.Label Label15 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Caption         =   "Email :"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   240
+         TabIndex        =   18
+         Top             =   3960
+         Width           =   885
+      End
+      Begin VB.Image Image1 
+         Appearance      =   0  'Flat
+         BorderStyle     =   1  'Fixed Single
+         Height          =   1575
+         Left            =   4920
+         Picture         =   "fPhysicianEntry.frx":1C8D5
+         Stretch         =   -1  'True
+         Top             =   1320
+         Width           =   1815
+      End
+      Begin VB.Label Label17 
+         AutoSize        =   -1  'True
+         BackColor       =   &H00FFFFFF&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Please provide all required information."
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00C00000&
+         Height          =   195
+         Left            =   960
+         TabIndex        =   16
+         Top             =   480
+         Width           =   2805
+      End
+      Begin VB.Label Label16 
+         AutoSize        =   -1  'True
+         BackColor       =   &H00FFFFFF&
+         BackStyle       =   0  'Transparent
+         Caption         =   "Physician Information"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00C00000&
+         Height          =   240
+         Left            =   960
+         TabIndex        =   15
+         Top             =   240
+         Width           =   2100
+      End
+      Begin VB.Image Image2 
+         Appearance      =   0  'Flat
+         Height          =   615
          Left            =   120
-         TabIndex        =   14
-         Top             =   2400
-         Width           =   1725
+         Picture         =   "fPhysicianEntry.frx":1D4E3
+         Stretch         =   -1  'True
+         Top             =   120
+         Width           =   735
       End
    End
    Begin prjLabSys.isButton cmdClose 
       Height          =   375
       Left            =   5880
       TabIndex        =   12
-      Top             =   7440
+      Top             =   7920
       Width           =   1215
       _ExtentX        =   2143
       _ExtentY        =   661
-      Icon            =   "fPhysicianEntry.frx":1C8D5
+      Icon            =   "fPhysicianEntry.frx":1DFA9
       Style           =   6
       Caption         =   "&Close"
       iNonThemeStyle  =   0
@@ -610,8 +705,8 @@ Begin VB.Form fPhysicianEntry
       RoundedBordersByTheme=   0   'False
    End
    Begin MSComctlLib.ImageList SmallIcons 
-      Left            =   720
-      Top             =   2160
+      Left            =   240
+      Top             =   7920
       _ExtentX        =   1005
       _ExtentY        =   1005
       BackColor       =   -2147483643
@@ -622,127 +717,127 @@ Begin VB.Form fPhysicianEntry
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   31
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1C8F1
+            Picture         =   "fPhysicianEntry.frx":1DFC5
             Key             =   "Open"
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1CC43
+            Picture         =   "fPhysicianEntry.frx":1E317
             Key             =   "Save"
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1CF95
+            Picture         =   "fPhysicianEntry.frx":1E669
             Key             =   "Save As"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1D2E7
+            Picture         =   "fPhysicianEntry.frx":1E9BB
             Key             =   "Close"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1D639
+            Picture         =   "fPhysicianEntry.frx":1ED0D
             Key             =   "Properties"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1D98B
+            Picture         =   "fPhysicianEntry.frx":1F05F
             Key             =   "Print"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1DCDD
+            Picture         =   "fPhysicianEntry.frx":1F3B1
             Key             =   "Cut"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1E02F
+            Picture         =   "fPhysicianEntry.frx":1F703
             Key             =   "Copy"
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1E381
+            Picture         =   "fPhysicianEntry.frx":1FA55
             Key             =   "Replace"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1E6D3
+            Picture         =   "fPhysicianEntry.frx":1FDA7
             Key             =   "Go To"
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1EA25
+            Picture         =   "fPhysicianEntry.frx":200F9
             Key             =   ""
          EndProperty
          BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1EFBF
+            Picture         =   "fPhysicianEntry.frx":20693
             Key             =   ""
          EndProperty
          BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1F559
+            Picture         =   "fPhysicianEntry.frx":20C2D
             Key             =   ""
          EndProperty
          BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":1FAF3
+            Picture         =   "fPhysicianEntry.frx":211C7
             Key             =   ""
          EndProperty
          BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":2008D
+            Picture         =   "fPhysicianEntry.frx":21761
             Key             =   ""
          EndProperty
          BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":20627
+            Picture         =   "fPhysicianEntry.frx":21CFB
             Key             =   ""
          EndProperty
          BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":20BC1
+            Picture         =   "fPhysicianEntry.frx":22295
             Key             =   ""
          EndProperty
          BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":2115B
+            Picture         =   "fPhysicianEntry.frx":2282F
             Key             =   ""
          EndProperty
          BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":216F5
+            Picture         =   "fPhysicianEntry.frx":22DC9
             Key             =   ""
          EndProperty
          BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":21C8F
+            Picture         =   "fPhysicianEntry.frx":23363
             Key             =   ""
          EndProperty
          BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":22229
+            Picture         =   "fPhysicianEntry.frx":238FD
             Key             =   ""
          EndProperty
          BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":227C3
+            Picture         =   "fPhysicianEntry.frx":23E97
             Key             =   ""
          EndProperty
          BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":22D5D
+            Picture         =   "fPhysicianEntry.frx":24431
             Key             =   ""
          EndProperty
          BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":232F7
+            Picture         =   "fPhysicianEntry.frx":249CB
             Key             =   ""
          EndProperty
          BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":23891
+            Picture         =   "fPhysicianEntry.frx":24F65
             Key             =   ""
          EndProperty
          BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":2400B
+            Picture         =   "fPhysicianEntry.frx":256DF
             Key             =   ""
          EndProperty
          BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":24A1D
+            Picture         =   "fPhysicianEntry.frx":260F1
             Key             =   ""
          EndProperty
          BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":25197
+            Picture         =   "fPhysicianEntry.frx":2686B
             Key             =   ""
          EndProperty
          BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":25BA9
+            Picture         =   "fPhysicianEntry.frx":2727D
             Key             =   ""
          EndProperty
          BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":26323
+            Picture         =   "fPhysicianEntry.frx":279F7
             Key             =   ""
          EndProperty
          BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "fPhysicianEntry.frx":26A9D
+            Picture         =   "fPhysicianEntry.frx":28171
             Key             =   ""
          EndProperty
       EndProperty
@@ -750,12 +845,12 @@ Begin VB.Form fPhysicianEntry
    Begin prjLabSys.isButton cmdSave 
       Height          =   375
       Left            =   3840
-      TabIndex        =   20
-      Top             =   7440
+      TabIndex        =   13
+      Top             =   7920
       Width           =   1935
       _ExtentX        =   3413
       _ExtentY        =   661
-      Icon            =   "fPhysicianEntry.frx":27217
+      Icon            =   "fPhysicianEntry.frx":288EB
       Style           =   6
       Caption         =   "&Save Changes"
       iNonThemeStyle  =   0
@@ -776,54 +871,13 @@ Begin VB.Form fPhysicianEntry
       MaskColor       =   0
       RoundedBordersByTheme=   0   'False
    End
-   Begin VB.Label Label16 
-      Alignment       =   1  'Right Justify
-      AutoSize        =   -1  'True
-      BackColor       =   &H00FFFFFF&
-      BackStyle       =   0  'Transparent
-      Caption         =   "Physician Adding / Editing"
-      BeginProperty Font 
-         Name            =   "Tahoma"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00000000&
-      Height          =   240
-      Left            =   120
-      TabIndex        =   31
-      Top             =   120
-      Width           =   2520
-   End
-   Begin VB.Label Label17 
-      AutoSize        =   -1  'True
-      BackColor       =   &H00FFFFFF&
-      BackStyle       =   0  'Transparent
-      Caption         =   ">   Please provide all required information."
-      BeginProperty Font 
-         Name            =   "Tahoma"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   195
-      Left            =   2760
-      TabIndex        =   30
-      Top             =   150
-      Width           =   3060
-   End
 End
 Attribute VB_Name = "fPhysicianEntry"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Public vSelectedID As String
 Private eMode As eTxnMode
 Private eActiveCallingForm As eCallingForm
 
@@ -842,12 +896,12 @@ End Type
 
 
 
-Public Property Let Mode(eStat As eTxnMode)
+Public Property Let mode(eStat As eTxnMode)
     eMode = eStat
 End Property
 
-Public Property Get Mode() As eTxnMode
-    Mode = eMode
+Public Property Get mode() As eTxnMode
+    mode = eMode
 End Property
 
 Public Property Let CallingForm(eCallForm As eCallingForm)
@@ -870,28 +924,61 @@ End Function
 
 
 
+Private Sub btnClose_Click()
+    cmdClose_Click
+End Sub
+
+Private Sub btnSave_Click()
+    cmdSave_Click
+End Sub
+
+Private Sub cmdBrowse_Click()
+    MsgBox "Currently disabled.       ", vbExclamation, ""
+End Sub
+
 Private Sub cmdClose_Click()
     Unload Me
 End Sub
 
 Private Sub cmdSave_Click()
     If validateRequiredFields Then
-        If Mode = eAddNew Then
+        Dim vRowIndex As Integer
+    
+        If mode = eAddNew Then 'create new record
             If CreatePhysicianInfo Then
                 MsgBox "Physician record successfully created.         ", vbInformation, system_title
-                ClearControls
-                txtSurname.SetFocus
-                
+
+                Dim vLastInsertID As Integer
+                vLastInsertID = GetLastInsertedId("physicians", dbCon)
                 If CallingForm = ePhysician Then 'parent form is Physician List
                     
+                    With fPhysician.lgPhysician
+                        .Redraw = False
+                        vRowIndex = .AddItem((txtSurname.Text & " " & txtFirstname.Text & " " & txtMiddlename.Text) & vbTab & txtHospital.Text & vbTab & txtMobile.Text & vbTab & txtEmail.Text)
+                        .RowTag(vRowIndex) = vLastInsertID
+                        .Redraw = True
+                    End With
                 Else
                 
                 End If
                 
-                
+                ClearControls
+                txtSurname.SetFocus
             End If
-        Else
-        
+        Else 'edit selected item
+            If UpdatePhysicianInfo Then
+                MsgBox "Physician record successfully updated.         ", vbInformation, system_title
+                
+                With fPhysician.lgPhysician
+                    vRowIndex = .row
+                    .CellText(vRowIndex, 0) = (txtSurname.Text & " " & txtFirstname.Text & " " & txtMiddlename.Text)
+                    .CellText(vRowIndex, 1) = txtHospital.Text
+                    .CellText(vRowIndex, 2) = txtMobile.Text
+                    .CellText(vRowIndex, 3) = txtEmail.Text
+                End With
+                
+                Unload Me
+            End If
         End If
     End If
 End Sub
@@ -916,7 +1003,23 @@ err:
 End Function
 
 
-
+Private Function UpdatePhysicianInfo() As Boolean
+    On Error GoTo err
+    Dim vSQL As String
+    
+    vSQL = "UPDATE physicians SET surname='" & StrEscape(txtSurname) & "',firstname='" & StrEscape(txtFirstname) & "'," & _
+    "middlename='" & StrEscape(txtMiddlename) & "',title='" & StrEscape(txtTitle) & "',mobile_no='" & StrEscape(txtMobile) & "'," & _
+    "landline='" & StrEscape(txtLandline) & "',email='" & StrEscape(txtEmail) & "',address='" & StrEscape(txtAddress) & _
+    "',hospital='" & StrEscape(txtHospital) & "',school='" & StrEscape(txtSchool) & "',department='" & StrEscape(txtDepartment) & "'," & _
+    "expertise='" & StrEscape(txtExpertise) & "' WHERE physician_id=" & vSelectedID
+    dbCon.Execute vSQL
+    UpdatePhysicianInfo = True
+    
+    Exit Function
+err:
+    UpdatePhysicianInfo = False
+    MsgBox err.Description, vbExclamation, ""
+End Function
 
 
 Private Function validateRequiredFields() As Boolean
